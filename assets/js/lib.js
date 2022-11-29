@@ -26,7 +26,7 @@ export function display(data, htmlBlock) {
     } else {
         const htmlBlockContainer = `
                 <p class="message error">${data}</p>
-            `
+            `;
         htmlBlock.insertAdjacentHTML('beforeend', htmlBlockContainer);
     }
 }

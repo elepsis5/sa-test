@@ -33,6 +33,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OpenServer\domains\smartAvia-test\assets\js" />
+      <recent name="G:\OpenServer\domains\smartAvia-test\assets\css" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669410256289</updated>
       <workItem from="1669410257548" duration="25721000" />
-      <workItem from="1669581341646" duration="39313000" />
+      <workItem from="1669581341646" duration="39980000" />
     </task>
     <servers />
   </component>
