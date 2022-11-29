@@ -1,6 +1,7 @@
 'use strict'
 const log = console.log;
-     // отрисовка HTML блока
+
+// отрисовка HTML блока
 export function display(data, htmlBlock) {
     if (typeof data === 'object') {
         let entries = Object.entries(data);

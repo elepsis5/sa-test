@@ -11,7 +11,7 @@ const spinner2 = document.querySelector('.left')
 const spinner3 = document.querySelector('.right')
 
 
-class  App {
+class App {
     i = 0;
 
     constructor() {
@@ -19,7 +19,7 @@ class  App {
     }
 
     // send query to API & get data
-    sendQueryAndGetDataAPI(){
+    sendQueryAndGetDataAPI() {
         this.i++;
 
         if (this.i <= 3) {
@@ -81,17 +81,15 @@ class  App {
 
     errorMiddleware(response) {
         const contentType = response.headers.get('content-type');
-        if(!response.ok) {
+        if (!response.ok) {
             throw new Error(response.status);
-        }
-        else if (contentType && contentType.indexOf("application/json") === -1) {
+        } else if (contentType && contentType.indexOf("application/json") === -1) {
             return response.text().then(
                 text => {
-                console.error(text);
+                    console.error(text);
                 }
             );
-        }
-        else {
+        } else {
             return response.text().then(
                 text => {
                     try {
@@ -101,8 +99,7 @@ class  App {
                         } else {
                             console.error(data);
                         }
-                    }
-                    catch (err) {
+                    } catch (err) {
                         throw new Error(err);
                     }
                 }

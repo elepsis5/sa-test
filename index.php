@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>SmartAvia-test</title>
 </head>
 <body>
     <div class="wrapper">
@@ -59,12 +59,10 @@
             </div>
         </div>
         <div id="toggles">
-<!--            <input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle"/>-->
             <button name="checkbox1" id="checkbox1" class="ios-toggle has-active"></button>
             <label for="checkbox1" class="checkbox-label" data-off="off" data-on="on"></label>
         </div>
     </div>
     <script type="module" src="assets/js/main.js"></script>
-
 </body>
 </html>
