@@ -4,8 +4,8 @@ import {display} from './lib.js';
 
 // const log = console.log;
 
-const btn = document.getElementById('checkbox1');
-const btcMsgsContainer = document.getElementById('btc-msgs');
+const btn = document.querySelector('.checkbox-label');
+export const inner = document.querySelector('.inner')
 const spinner1 = document.querySelector('.center')
 const spinner2 = document.querySelector('.left')
 const spinner3 = document.querySelector('.right')
@@ -47,12 +47,12 @@ class App {
             .then(
                 data => {
                     const result = new BtcProps(data);
-                    display(result, btcMsgsContainer);
+                    display(result, inner);
                 }
             )
             .catch(
                 error => {
-                    this.displayErrorMessage(`Что-то пошло не так. Попробуйте еще раз!`)
+                    display(`Что-то пошло не так. Попробуйте еще раз!`, inner);
                 }
             )
             .finally(
@@ -73,10 +73,6 @@ class App {
                     this.i--;
                 }
             );
-    }
-
-    displayErrorMessage(message) {
-        display(message, btcMsgsContainer);
     }
 
     errorMiddleware(response) {

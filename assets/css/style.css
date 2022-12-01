@@ -36,27 +36,41 @@ h1 {
 
 #btc-container {
     flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    overflow-y: scroll;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*overflow-y: scroll;*/
     max-height: 960px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 #btc-msgs {
     flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*align-content: flex-end;*/
+    /*align-items: flex-end;*/
+    /*justify-content: flex-end;*/
     width: 30%;
     border: 4px solid #a0a0a0;
     border-radius: 30px;
     padding: 40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-
-#btc-msgs :last-child :before {
+.inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100%;
+    justify-content: flex-end;
+}
+.inner :last-child :before {
     content: "";
     position: absolute;
     z-index: 0;
@@ -69,7 +83,7 @@ h1 {
     border-bottom-left-radius: 15px;
 }
 
-#btc-msgs :last-child :after {
+.inner :last-child :after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -204,11 +218,13 @@ h1 {
     margin-bottom: 5px;
     display: inline-block;
     color: white;
-    margin-left: 25%;
+    /*margin-left: 25%;*/
     background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
     background-attachment: fixed;
     position: relative;
     animation: show .5s;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 @keyframes show {
@@ -334,4 +350,8 @@ h1 {
     100% {
         background-color: transparent;
     }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
 }

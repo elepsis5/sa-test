@@ -1,8 +1,11 @@
 'use strict'
-const log = console.log;
+// const log = console.log;
+import {inner} from './main.js';
 
 // отрисовка HTML блока
 export function display(data, htmlBlock) {
+    inner.scrollTop = inner.scrollHeight;
+
     if (typeof data === 'object') {
         let entries = Object.entries(data);
         let msgsContainer = `<div class="message">`;

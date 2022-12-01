@@ -12,7 +12,9 @@
     <div class="wrapper">
         <h1>Нажмите, чтобы сгенерировать новый ключ</h1>
         <div id="btc-container">
-            <div id="btc-msgs"></div>
+            <div id="btc-msgs">
+                <div class="inner"></div>
+            </div>
             <div class="overlay">
                 <div class="spinner left hidden">
                     <div class="spinner-blade"></div>
