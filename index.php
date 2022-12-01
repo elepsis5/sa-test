@@ -61,8 +61,8 @@
             </div>
         </div>
         <div id="toggles">
-            <button name="checkbox1" id="checkbox1" class="ios-toggle has-active"></button>
-            <label for="checkbox1" class="checkbox-label" data-off="off" data-on="on"></label>
+            <button name="checkbox1" id="checkbox1" class="checkbox ios-toggle has-active"></button>
+            <label for="checkbox1" class="checkbox checkbox-label" data-off="off" data-on="on"></label>
         </div>
     </div>
     <script type="module" src="assets/js/main.js"></script>

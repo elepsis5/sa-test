@@ -69,6 +69,7 @@ h1 {
     flex-grow: 1;
     min-height: 100%;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 .inner :last-child :before {
     content: "";

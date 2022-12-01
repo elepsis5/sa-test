@@ -2,9 +2,10 @@
 import BtcProps from './btcProps.js';
 import {display} from './lib.js';
 
-// const log = console.log;
+const log = console.log;
 
-const btn = document.querySelector('.checkbox-label');
+// const btn = document.querySelector('.checkbox-label');
+const btn = document.querySelectorAll('.checkbox');
 export const inner = document.querySelector('.inner')
 const spinner1 = document.querySelector('.center')
 const spinner2 = document.querySelector('.left')
@@ -15,7 +16,8 @@ class App {
     i = 0;
 
     constructor() {
-        btn.addEventListener('click', this.sendQueryAndGetDataAPI.bind(this));
+        log(btn[0]);
+        btn[0].addEventListener('click', this.sendQueryAndGetDataAPI.bind(this));
     }
 
     // send query to API & get data
@@ -32,8 +34,10 @@ class App {
                     break;
                 case 3:
                     spinner3.classList.remove('hidden');
-                    btn.classList.remove('has-active');
-                    btn.disabled = true;
+                    btn.forEach((item) => {
+                        item.classList.remove('has-active');
+                        item.disabled = true;
+                    });
                     break;
             }
         }
@@ -66,8 +70,10 @@ class App {
                             break;
                         case 3:
                             spinner3.classList.add('hidden');
-                            btn.classList.add('has-active');
-                            btn.disabled = false;
+                            btn.forEach((item) => {
+                                item.classList.add('has-active');
+                                item.disabled = false;
+                            });
                             break;
                     }
                     this.i--;
